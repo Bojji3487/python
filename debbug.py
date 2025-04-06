@@ -1,21 +1,18 @@
-while True:
-    try:
-        weight = float(input("Enter weight (kg): "))
-        if weight <= 0:
-            print("Weight must be positive. Try again.")
+a=1
+print(f'We are in {__name__}.py')
+if __name__=='__main__':
+    while True:
+        print('Enter your age:')
+        age = input()
+        try:
+            age = int(age)
+        except:
+            print('Please use numeric digits.')
             continue
-        break
-    except ValueError:
-        print("Invalid input. Enter a number (e.g., 70).")
+        if age < 1:
+            print('Please enter a positive number.')
+            continue
 
-while True:
-    try:
-        height = float(input("Enter height (m): "))
-        if height <= 0:
-            print("Height must be positive. Try again.")
-            continue
-        bmi = weight / (height ** 2)
-        print(f"Your BMI: {bmi:.2f}")
+        print(f'Age={age}')
         break
-    except ValueError:
-        print("Invalid input. Enter a number (e.g., 1.75).")
+

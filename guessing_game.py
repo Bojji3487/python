@@ -48,5 +48,3 @@ def main():
         time.sleep(1)
         print('\n')
         game(rangeStart,rangeEnd)
-
-main()
