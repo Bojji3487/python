@@ -6,6 +6,9 @@ class grandparent:
         self.age=age
         firstName.capitalize
 
+    def __del__(self):
+        del grandparent 
+
     def printVal(self):
         print(f'Name is {self.firstName+" "+self.lastName} and age is {self.age}')
 
