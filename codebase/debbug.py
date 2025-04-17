@@ -1,6 +1,5 @@
 a=1
-print(f'We are in {__name__}.py')
-if __name__=='__main__':
+if __name__=='_main_':
     while True:
         print('Enter your age:')
         age = input()
